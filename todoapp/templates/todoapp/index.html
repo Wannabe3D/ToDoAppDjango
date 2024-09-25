@@ -1,0 +1,57 @@
+{% extends "todoapp/base.html" %}
+
+{% block content %}
+{% if not user.is_authenticated %}
+    <div class='jumbotron'>
+     <p class="lead">Составляйте задачи и правильно управляйте своим временем! Здесь вы можете вести свой подробный список дел и
+                отслеживать их выполнение!</p>
+        <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}" role="button">Регистрация &raquo;</a>
+    </div>
+{% endif %}
+
+    {% if tasks %}
+    <h2 class="tasklist">Ваш список задач</h2>
+    <form method="post" action="{% url 'todoapp:add_task' %}" class="tasklist">
+        {% csrf_token %}
+        <button type="submit" name="add" class="btn btn-lg btn-primary">Добавить задачу</button>
+    </form>
+    <ul>
+    {% for task in tasks %}
+        <div class="container">
+            <div class="task">
+                <p class="task-name">{{ task.title }}</p>
+                <p><strong>Описание:</strong> {{ task.text }}</p>
+                <p><strong>Срок:</strong> до {{ task.deadline }}</p>
+                <div class="buttons">
+                    <form method="post" action="{% url 'todoapp:edit_task' task.id %}">
+                        {% csrf_token %}
+                        <button type="submit" name="edit" class="edit-button">Редактировать</button>
+                    </form>
+                    <form method="post" action="{% url 'todoapp:complete_task' task.id %}">
+                        {% csrf_token %}
+                        {% if task.completed %}
+                        <button type="submit" name="complete" class="complete-button-2">Выполнено</button>
+                        {% else %}
+                        <button type="submit" name="complete" class="complete-button">Выполнить</button>
+                        {% endif %}
+                    </form>
+                    <form method="post" action="{% url 'todoapp:delete_task' task.id %}">
+                        {% csrf_token %}
+                        <button type="submit" name="delete" class="delete-button">Удалить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</ul>
+    {% else %}
+        {% if user.is_authenticated %}
+            <p>Ваш список задач ещё не сформирован. Самое время создать его!</p>
+            <form method="post" action="{% url 'todoapp:add_task' %}" class="tasklist">
+            {% csrf_token %}
+                <button type="submit" name="add" class="btn btn-lg btn-primary">Добавить задачу</button>
+            </form>
+        {% endif %}
+    {% endif %}
+    {% endblock content %}
+

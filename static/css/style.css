@@ -1,0 +1,251 @@
+.task {
+    display: block;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+.buttons {
+    display: flex;
+}
+.container {
+  width: 50%;
+  margin: 5px auto;
+}
+
+.task-name {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.tasklist {
+    font-size: 36px;
+    text-align: center;
+}
+
+.jumbotron {
+text-align: center;
+}
+
+.complete-button {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 5px 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-left: 5px;
+}
+
+.complete-button:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.complete-button:hover {
+  background-color: #2c974b;
+}
+
+.complete-button:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.complete-button:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.complete-button:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.edit-button {
+  appearance: none;
+  background-color: #2a52be;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 5px 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-left: 5px;
+}
+
+.edit-button:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.edit-button:hover {
+  background-color: #6666ff;
+}
+
+.edit-button:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.edit-button:disabled {
+  background-color: #6666ff;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.edit-button:active {
+  background-color: #3333ff;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.complete-button-2 {
+  appearance: none;
+  background-color: #6600ff;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 5px 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-left: 5px;
+}
+
+.complete-button-2:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.complete-button-2:hover {
+  background-color: #8000ff;
+}
+
+.complete-button-2:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.complete-button-2:disabled {
+  background-color: #9933ff;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.complete-button-2:active {
+  background-color: #b366ff;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.delete-button {
+  appearance: none;
+  background-color: #ff0000;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 5px 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-left: 5px;
+}
+
+.delete-button:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.delete-button:hover {
+  background-color: #990000;
+}
+
+.delete-button:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.delete-button:disabled {
+  background-color: #ff0000;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.delete-button:active {
+  background-color: #ff3333;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+/* Стиль для контейнера формы */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Стиль для заголовка формы */
+.form-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Стиль для ссылки "Назад к списку задач" */
+.back-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+

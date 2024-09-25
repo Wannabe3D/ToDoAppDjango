@@ -1,0 +1,14 @@
+{% extends "todoapp/base.html" %}
+
+{% block content %}
+<div class="form-container">
+    <h1>Добавить новую задачу</h1>
+    <form method="post" action="{% url 'todoapp:add_task' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="complete-button">Добавить задачу</button>
+    </form>
+    <br>
+    <a href="{% url 'todoapp:index' %}" class="back-link">Назад к списку задач</a>
+</div>
+{% endblock content %}

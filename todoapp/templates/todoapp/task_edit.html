@@ -1,0 +1,27 @@
+{% extends "todoapp/base.html" %}
+{% block content %}
+<div class="form-container">
+    <form method="post">
+    {% csrf_token %}
+    <div class="field">
+
+        <label for="id_title">Задача:</label>
+        <input type="text" id="id_title" name="title" value="{{ task.title }}">
+    </div>
+    <div class="field">
+        <label for="id_text">Описание:</label>
+        <textarea id="id_text" name="text">{{ task.text }}</textarea>
+    </div>
+    <div class="field">
+        <label for="id_deadline">Срок:</label>
+        <input type="datetime-local" id="id_deadline" name="deadline" value="{{ task.deadline|date:'Y-m-d\TH:i' }}">
+    </div>
+    <div class="field">
+        <label for="id_completed">Выполнено:</label>
+        <input type="checkbox" id="id_completed" name="completed" {% if task.completed %}checked{% endif %}>
+    </div>
+    <button type="submit" class="edit-button">Сохранить</button>
+</form>
+    <a href="{% url 'todoapp:index' %}" class="back-link">Назад к списку задач</a>
+</div>
+{% endblock content %}
